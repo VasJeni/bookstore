@@ -9,11 +9,13 @@ services:
       - 8000:8000
     depends_on:
       - db
-  db: 
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-_07ca5wuye=4r2#b3n3u%f50(7a(-iuq@q##(k8d8%1@u*p052"
+  db:
     image: postgres:13
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment: 
+    environment:
       - "POSTGRES_HOST_AUTH_METHOD=trust"
 volumes:
   postgres_data:
