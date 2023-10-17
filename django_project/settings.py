@@ -96,6 +96,7 @@ DATABASES = {
         "HOST": "db",
         "PORT": 5432,
     }
+    # "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
 }
 
 
@@ -168,3 +169,5 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+DEBUG = env.bool("DJANGO_DEBUG")
