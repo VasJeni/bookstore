@@ -171,3 +171,4 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 
 DEBUG = env.bool("DJANGO_DEBUG")
+DEFAULT_FROM_EMAIL = "admin@djangobookstore.com"
